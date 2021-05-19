@@ -1,0 +1,25 @@
+.page-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 0;
+
+  .title {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+  .message {
+      margin: 0.5rem 0;
+  }
+
+  .btn-back {
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border: 1px solid #455a64;
+    background-color: #607d8b;
+    margin: 0.5rem 0;
+  }
+}

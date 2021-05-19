@@ -1,0 +1,33 @@
+<div class="app-users">
+  <div class="justify-between">
+    <h1>Users</h1>
+    <div>
+      <input
+        type="search"
+        class="search-input"
+        placeholder="Type someting and enter to search"
+        (change)="onChange($event)"
+      />
+      <button (click)="addUser()" class="btn-add-user">Add User</button>
+    </div>
+  </div>
+  <div class="users-list">
+    <div class="user" *ngFor="let user of users">
+      <img src="{{ user.imageUrl }}" alt="{{ user.firstName }}" />
+      <div class="user-content">
+        <h1 class="user-name">
+          {{ user.title }}. {{ user.firstName }} {{ user.lastName }}
+        </h1>
+        <p class="user-email">{{ user.email }}</p>
+        <div class="btn-container">
+          <button (click)="editUser(user)" class="btn edit-user">
+            Edit User
+          </button>
+          <button (click)="deleteUser(user.id)" class="btn delete-user">
+            Delete User
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

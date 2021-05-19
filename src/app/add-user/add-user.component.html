@@ -1,0 +1,58 @@
+<form [formGroup]="userForm" class="add-user" (ngSubmit)="saveUser()">
+  <div>
+    <h1 class="add-user-heading">{{ isEdit ? "Edit" : "Add" }} User Form</h1>
+  </div>
+  <div class="input-group">
+    <label class="required" for="title">Title</label>
+    <select formControlName="title" name="title" id="title" class="input">
+      <option value="Mr">Mr</option>
+      <option value="Miss">Miss</option>
+    </select>
+  </div>
+  <div class="input-group">
+    <label class="required" for="firstName">First Name</label>
+    <input
+      formControlName="firstName"
+      type="text"
+      id="firstName"
+      name="firstName"
+      class="input"
+    />
+  </div>
+  <div class="input-group">
+    <label class="requried" for="lastName">Last Name</label>
+    <input
+      formControlName="lastName"
+      type="text"
+      id="lastName"
+      name="lastName"
+      class="input"
+    />
+  </div>
+  <div class="input-group">
+    <label class="required" for="email">Email</label>
+    <input
+      formControlName="email"
+      type="text"
+      id="email"
+      name="email"
+      class="input"
+    />
+  </div>
+  <div class="input-group">
+    <label class="required" for="imageUrl">Image URL</label>
+    <input
+      formControlName="imageUrl"
+      type="text"
+      id="imageUrl"
+      name="imageUrl"
+      class="input"
+    />
+  </div>
+  <div class="justify-center">
+    <button class="btn btn-save" type="submit" [disabled]="userForm.invalid">
+      {{ isEdit ? "Update" : "Save" }}
+    </button>
+    <button class="btn btn-back" (click)="back()">Back</button>
+  </div>
+</form>

@@ -1,0 +1,63 @@
+.app-users {
+  .justify-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search-input {
+    padding: 0.5rem;
+    width: 300px;
+    margin: 0 1rem;
+  }
+  .users-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .user {
+      width: 300px;
+      background-color: #fff;
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      .user-content {
+        padding: 1rem;
+        .user-name {
+          font-size: 1rem;
+          margin: 0.5rem 0;
+        }
+        .user-email {
+          font-size: 1rem;
+          margin: 0;
+        }
+        .btn-container {
+          display: flex;
+          justify-content: space-between;
+          .btn {
+            color: #fff;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            margin: 1rem 0 0;
+          }
+          .edit-user {
+            border: 1px solid #00796b;
+            background-color: #009688;
+            margin-right: 1rem;
+          }
+          .delete-user {
+            border: 1px solid #455a64;
+            background-color: #607d8b;
+          }
+        }
+      }
+    }
+  }
+  .btn-add-user {
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border: 1px solid #c2185b;
+    background-color: #e91e63;
+  }
+}
